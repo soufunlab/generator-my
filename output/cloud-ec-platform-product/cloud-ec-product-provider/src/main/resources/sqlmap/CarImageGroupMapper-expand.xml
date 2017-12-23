@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+PUBLIC "-//ibatis.apache.org//DTD Mapper 3.0//EN"  "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+
+<!-- 存放手写的sql -->
+<mapper namespace="com.cloudyoung.ec.car.dao.CarImageGroupMapper">
+
+	<resultMap id="BaseResultMapVo" type="com.cloudyoung.ec.car.model.CarImageGroup">
+			<result property="id" column="id"/>
+			<result property="groupName" column="group_name"/>
+			<result property="isActive" column="is_active"/>
+			<result property="filterKey" column="filter_key"/>
+			<result property="createTime" column="create_time"/>
+			<result property="updateTime" column="update_time"/>
+	</resultMap>
+	
+</mapper>

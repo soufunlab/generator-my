@@ -1,0 +1,362 @@
+<#assign className = table.className>   
+<#assign classNameLower = className?uncap_first> 
+
+<html>
+<style>
+table,th,tr,td{
+	border: 1px solid #ddd;
+}
+
+table{
+	border:0px
+	cellspacing:0px
+}
+
+th{
+	background-color: #f0f0f0;
+}
+</style>
+
+<p>${className}</p>
+<table border="0" 
+cellspacing="0">
+	<tr>
+		<th>字段</th><th>类型</th><th>空</th><th>默认</th><th>注释</th>
+	</tr>
+	<#list table.columns as column>  
+	<tr>
+		<td>${column.columnNameLower}</td>
+		<td>${column.simpleJavaType}</td>
+		<td>否</td>
+		<td></td>
+		<td>${column.remarks}</td>
+	</tr>
+	</#list> 
+</table>
+
+<p></br></p>
+
+<p>${className}SearchParameter</p>
+<table border="0" 
+cellspacing="0">
+	<tr>
+		<th>字段</th><th>类型</th><th>空</th><th>默认</th><th>注释</th>
+	</tr>
+	<#list table.columns as column>  
+	<tr>
+		<td>${column.columnNameLower}</td>
+		<td>${column.simpleJavaType}</td>
+		<td>否</td>
+		<td></td>
+		<td>${column.remarks}</td>
+	</tr>
+	</#list> 
+</table>
+
+<p></br></p>
+
+<!--添加-->
+<p>简要描述：</p>
+<p>新增${className}实体</p>
+<p>服务支持：李浩</p>
+<p></br></p>
+<p>方法签名：</p>
+<p>Result&lt;${className}&gt; add${className}(${className} entity, String sessionId);</p>
+<p>API：</p>
+<p>${basepackage}.${className}Api</p>
+<p></br></p>
+<p>入参信息</p>
+<table border="0" 
+cellspacing="0">
+	<tr>
+		<th>字段</th><th>类型</th><th>空</th><th>默认</th><th>注释</th>
+	</tr>
+	<tr>
+		<td>entity</td>
+		<td>${className}</td>
+		<td>否</td>
+		<td></td>
+		<td>插入实体</td>
+	</tr>
+	<tr>
+		<td>sessionId</td>
+		<td>String</td>
+		<td>否</td>
+		<td></td>
+		<td>会话id</td>
+	</tr>	
+</table>
+<p></br></p>
+<p>出参信息</p>
+<table border="0" 
+cellspacing="0">
+	<tr>
+		<th>字段</th><th>类型</th><th>注释</th>
+	</tr>
+	<tr>
+		<td>result</td>
+		<td>Result&lt;${className}&gt;</td>
+		<td>返回插入实体，id为入库后自增id</td>
+	</tr>
+</table>
+<p></br></p>
+<p>备注：无</p>
+
+<p></br></p>
+<p></br></p>
+
+<!--删除-->
+<p>简要描述：</p>
+<p>删除${className}实体（逻辑删除）</p>
+<p>服务支持：李浩</p>
+<p></br></p>
+<p>方法签名：</p>
+<p>Result&lt;Boolean&gt; del${className}ById(${table.getPkColumn().javaType} id, String sessionId);</p>
+<p>API：</p>
+<p>${basepackage}.${className}Api</p>
+<p></br></p>
+<p>入参信息</p>
+<table border="0" 
+cellspacing="0">
+	<tr>
+		<th>字段</th><th>类型</th><th>空</th><th>默认</th><th>注释</th>
+	</tr>
+	<tr>
+		<td>id</td>
+		<td>${table.getPkColumn().javaType}</td>
+		<td>否</td>
+		<td></td>
+		<td>主键Id</td>
+	</tr>
+	<tr>
+		<td>sessionId</td>
+		<td>String</td>
+		<td>否</td>
+		<td></td>
+		<td>会话id</td>
+	</tr>	
+</table>
+<p></br></p>
+<p>出参信息</p>
+<table border="0" 
+cellspacing="0">
+	<tr>
+		<th>字段</th><th>类型</th><th>注释</th>
+	</tr>
+	<tr>
+		<td>result</td>
+		<td>Result&lt;Boolean&gt;</td>
+		<td>删除成功返回true，否则返回false</td>
+	</tr>
+</table>
+<p></br></p>
+<p>备注：无</p>
+
+<p></br></p>
+<p></br></p>
+
+<!--主键查询实体-->
+<p>简要描述：</p>
+<p>根据主键查询${className}实体</p>
+<p>服务支持：李浩</p>
+<p></br></p>
+<p>方法签名：</p>
+<p>Result&lt;${className}&gt; get${className}ById(${table.getPkColumn().javaType} id, String sessionId);</p>
+<p>API：</p>
+<p>${basepackage}.${className}Api</p>
+<p></br></p>
+<p>入参信息</p>
+<table border="0" 
+cellspacing="0">
+	<tr>
+		<th>字段</th><th>类型</th><th>空</th><th>默认</th><th>注释</th>
+	</tr>
+	<tr>
+		<td>id</td>
+		<td>${table.getPkColumn().javaType}</td>
+		<td>否</td>
+		<td></td>
+		<td>主键Id</td>
+	</tr>
+	<tr>
+		<td>sessionId</td>
+		<td>String</td>
+		<td>否</td>
+		<td></td>
+		<td>会话id</td>
+	</tr>	
+</table>
+<p></br></p>
+<p>出参信息</p>
+<table border="0" 
+cellspacing="0">
+	<tr>
+		<th>字段</th><th>类型</th><th>注释</th>
+	</tr>
+	<tr>
+		<td>result</td>
+		<td>Result&lt;${className}&gt;</td>
+		<td>查询结果实体</td>
+	</tr>
+</table>
+<p></br></p>
+<p>备注：无</p>
+
+<p></br></p>
+<p></br></p>
+
+<!--更新实体-->
+<p>简要描述：</p>
+<p>根据主键更新${className}实体</p>
+<p>服务支持：李浩</p>
+<p></br></p>
+<p>方法签名：</p>
+<p>Result&lt;Boolean&gt; update${className}(${className} entity, String sessionId);</p>
+<p>API：</p>
+<p>${basepackage}.${className}Api</p>
+<p></br></p>
+<p>入参信息</p>
+<table border="0" 
+cellspacing="0">
+	<tr>
+		<th>字段</th><th>类型</th><th>空</th><th>默认</th><th>注释</th>
+	</tr>
+	<tr>
+		<td>entity</td>
+		<td>${className}</td>
+		<td>否</td>
+		<td></td>
+		<td>更新实体</td>
+	</tr>
+	<tr>
+		<td>sessionId</td>
+		<td>String</td>
+		<td>否</td>
+		<td></td>
+		<td>会话id</td>
+	</tr>	
+</table>
+<p></br></p>
+<p>出参信息</p>
+<table border="0" 
+cellspacing="0">
+	<tr>
+		<th>字段</th><th>类型</th><th>注释</th>
+	</tr>
+	<tr>
+		<td>result</td>
+		<td>Result&lt;Boolean&gt;</td>
+		<td>更新成功返回true，否则返回false</td>
+	</tr>
+</table>
+<p></br></p>
+<p>备注：无</p>
+
+<p></br></p>
+<p></br></p>
+
+<!--更新实体-->
+<p>简要描述：</p>
+<p>条件查询实体${className}列表</p>
+<p>服务支持：李浩</p>
+<p></br></p>
+<p>方法签名：</p>
+<p>Result&lt;List&lt;${className}&gt;&gt; get${className}ListByCondition(${className}SearchParameter searchVo,String sessionId);</p>
+<p>API：</p>
+<p>${basepackage}.${className}Api</p>
+<p></br></p>
+<p>入参信息</p>
+<table border="0" 
+cellspacing="0">
+	<tr>
+		<th>字段</th><th>类型</th><th>空</th><th>默认</th><th>注释</th>
+	</tr>
+	<tr>
+		<td>searchVo</td>
+		<td>${className}SearchParameter</td>
+		<td>否</td>
+		<td></td>
+		<td>查询条件实体</td>
+	</tr>
+	<tr>
+		<td>sessionId</td>
+		<td>String</td>
+		<td>否</td>
+		<td></td>
+		<td>会话id</td>
+	</tr>	
+</table>
+<p></br></p>
+<p>出参信息</p>
+<table border="0" 
+cellspacing="0">
+	<tr>
+		<th>字段</th><th>类型</th><th>注释</th>
+	</tr>
+	<tr>
+		<td>result</td>
+		<td>Result&lt;List&lt;${className}&gt;&gt;</td>
+		<td>查询结果列表</td>
+	</tr>
+</table>
+<p></br></p>
+<p>备注：无</p>
+
+<p></br></p>
+<p></br></p>
+
+<!--更新实体-->
+<p>简要描述：</p>
+<p>条件分页查询实体${className}列表</p>
+<p>服务支持：李浩</p>
+<p></br></p>
+<p>方法签名：</p>
+<p>Result&lt;Pagination&lt;${className}&gt;&gt; get${className}PageListByCondition(${className}SearchParameter searchVo,Pagination page,String sessionId);</p>
+<p>API：</p>
+<p>${basepackage}.${className}Api</p>
+<p></br></p>
+<p>入参信息</p>
+<table border="0" 
+cellspacing="0">
+	<tr>
+		<th>字段</th><th>类型</th><th>空</th><th>默认</th><th>注释</th>
+	</tr>
+	<tr>
+		<td>searchVo</td>
+		<td>${className}SearchParameter</td>
+		<td>否</td>
+		<td></td>
+		<td>查询条件实体</td>
+	</tr>
+	<tr>
+		<td>page</td>
+		<td>Pagination</td>
+		<td>否</td>
+		<td></td>
+		<td>分页对象</td>
+	</tr>
+	<tr>
+		<td>sessionId</td>
+		<td>String</td>
+		<td>否</td>
+		<td></td>
+		<td>会话id</td>
+	</tr>	
+</table>
+<p></br></p>
+<p>出参信息</p>
+<table border="0" 
+cellspacing="0">
+	<tr>
+		<th>字段</th><th>类型</th><th>注释</th>
+	</tr>
+	<tr>
+		<td>result</td>
+		<td>Result&lt;Pagination&lt;${className}&gt;&gt; </td>
+		<td>查询分页结果</td>
+	</tr>
+</table>
+<p></br></p>
+<p>备注：无</p>
+
+</html>

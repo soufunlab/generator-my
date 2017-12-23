@@ -1,0 +1,3 @@
+1.generator.xml 配置数据库以及包名称，修改cname,ccode
+2.template 文件夹下是模板，可以查看模板源码修改包名，以及注释等
+3.运行rapid-gen.bat，输入gen 表名称，回车后生成代码在generator-output 中

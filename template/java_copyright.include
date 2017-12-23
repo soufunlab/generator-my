@@ -1,0 +1,6 @@
+/*
+ * Description:
+ * All Rights Reserved.
+ * @version 1.0 <#if now??>${now?string('yyyy/MM/dd hh:mm')}</#if>  by  ${cname}${ccode}@cloud-young.com${cdes}
+ */
+
