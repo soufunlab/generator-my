@@ -7,11 +7,10 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Date;
 import java.io.Serializable;
-import com.cloudyoung.ec.common.model.base.ParentModel;
-import com.cloudyoung.ec.common.model.base.CheckFieldAnnotation;
+import com.ratel.common.model.annotation.*;
 
 <#include "/java_copyright.include">
-public class ${className} extends ParentModel<${className}> implements Serializable {
+public class ${className} implements Serializable {
 
 
 	//alias
@@ -20,10 +19,10 @@ public class ${className} extends ParentModel<${className}> implements Serializa
 	/**
 	*${column.remarks}
 	*/
-	@CheckFieldAnnotation(insertNotNull = true,updateNotNull = false,name = "${column.columnNameLower}")
+	@InsertRequiredAnno
 	</#if>
 	<#if  column.pk>
-	@CheckFieldAnnotation(insertNotNull = false,updateNotNull = true,name = "${column.columnNameLower}")
+	@UpdateRequiredAnno
 	</#if>
 	private ${column.simpleJavaType} ${column.columnNameLower};  
     </#list> 

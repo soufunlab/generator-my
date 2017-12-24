@@ -6,7 +6,7 @@ import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Date;
-import com.cloudyoung.ec.common.model.base.BaseModel;
+import com.ratel.common.model.base.BaseModel;
 
 <#include "/java_copyright.include">
 public class ${className}Example extends BaseModel {

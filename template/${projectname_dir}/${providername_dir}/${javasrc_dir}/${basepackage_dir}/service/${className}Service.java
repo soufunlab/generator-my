@@ -5,9 +5,9 @@ package ${basepackage}.service;
 import ${basepackage}.service.BaseService;
 import ${basepackage}.model.${className};
 import ${basepackage}.model.${className}Example;
-import ${basepackage}.parameter.*;
+import ${basepackage}.query.*;
 import java.util.List;
-import com.cloudyoung.ec.common.model.page.Pagination;
+import com.ratel.common.model.page.Pagination;
 
 <#include "/java_copyright.include">
 public interface ${className}Service extends BaseService<${className}, ${className}Example> {

@@ -1,11 +1,11 @@
 <#assign className = table.className>   
 <#assign classNameLower = className?uncap_first>   
-package ${basepackage}.api.service;
+package ${basepackage}.api;
 
-import com.cloudyoung.ec.common.model.base.Result;
-import com.cloudyoung.ec.common.model.page.Pagination;
+import com.ratel.common.model.base.Result;
+import com.ratel.common.model.page.Pagination;
 import ${basepackage}.model.*;
-import ${basepackage}.parameter.*;
+import ${basepackage}.query.*;
 
 import java.util.List;
 

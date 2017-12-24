@@ -2,7 +2,7 @@
 <#assign classNameLower = className?uncap_first>   
 package ${basepackage}.test;
 
-import com.cloudyoung.ec.common.model.base.Result;
+import com.ratel.common.model.base.Result;
 import ${basepackage}.api.service.*;
 import ${basepackage}.model.*;
 import org.junit.Test;
@@ -12,10 +12,10 @@ import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
-import ${basepackage}.api.service.*;
 import org.junit.Assert;
-import ${basepackage}.parameter.*;
-import com.cloudyoung.ec.common.model.page.Pagination;
+import ${basepackage}.query.*;
+import com.ratel.common.model.page.Pagination;
+import com.ratel.common.model.MoChecker;
 
 public class ${className}ApiTest extends BaseTest {
     @Autowired
