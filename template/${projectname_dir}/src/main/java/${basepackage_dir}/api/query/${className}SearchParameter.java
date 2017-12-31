@@ -1,6 +1,6 @@
 <#assign className = table.className>   
 <#assign classNameLower = className?uncap_first> 
-package ${basepackage}.query;
+package ${basepackage}.api.query;
 
 import java.io.Serializable;
 import java.math.BigDecimal;

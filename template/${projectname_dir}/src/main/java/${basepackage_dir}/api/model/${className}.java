@@ -1,6 +1,6 @@
 <#assign className = table.className>   
 <#assign classNameLower = className?uncap_first> 
-package ${basepackage}.model;
+package ${basepackage}.api.model;
 
 import java.math.BigDecimal;
 import java.util.ArrayList;

@@ -1,15 +1,15 @@
 <#assign className = table.className>   
 <#assign classNameLower = className?uncap_first>   
-package ${basepackage}.service.impl;
+package ${basepackage}.impl.api.service.impl;
 
-import ${basepackage}.service.impl.BaseServiceImpl;
+import ${basepackage}.impl.api.service.impl.BaseServiceImpl;
 import java.util.Map;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
-import ${basepackage}.model.${className};
-import ${basepackage}.model.${className}Example;
-import ${basepackage}.service.${className}Service;
-import ${basepackage}.query.*;
+import ${basepackage}.api.model.${className};
+import ${basepackage}.api.model.${className}Example;
+import ${basepackage}.impl.api.service.${className}Service;
+import ${basepackage}.api.query.*;
 import java.util.List;
 import com.ratel.common.model.page.Pagination;
 import com.github.pagehelper.PageHelper;

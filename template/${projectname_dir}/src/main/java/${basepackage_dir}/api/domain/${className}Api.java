@@ -1,11 +1,11 @@
 <#assign className = table.className>   
 <#assign classNameLower = className?uncap_first>   
-package ${basepackage}.api;
+package ${basepackage}.api.domain;
 
 import com.ratel.common.model.base.Result;
 import com.ratel.common.model.page.Pagination;
-import ${basepackage}.model.*;
-import ${basepackage}.query.*;
+import ${basepackage}.api.model.*;
+import ${basepackage}.api.query.*;
 
 import java.util.List;
 

@@ -7,7 +7,7 @@
 		2.可以引用环境变量: ${env.JAVA_HOME} or System.properties: ${user.home},property之间也可以相互引用
 	</comment>
 	
-	<entry key="basepackage">com.info</entry><!--放置于哪个中心-->
+	<entry key="basepackage">com.ratel.info</entry><!--放置于哪个中心-->
 	<entry key="modelpackage"></entry> <!--生成实体的包路径 ： 表名去掉“_”+.model--> 
 	<entry key="mapperpath"></entry><!-- 生成mapper.xml文件中mapper文件路径-->
 	<entry key="modelpath"></entry><!--生成实体名称 ： 表名去掉“_”-->
@@ -23,7 +23,7 @@
 	
 	<!-- <entry key="outRoot">F:\云漾\CODE</entry> -->
 	<!--<entry key="outRoot">C:\youngGit\</entry>-->
-	<entry key="outRoot">D:\github\springweb\</entry>
+	<entry key="outRoot">D:\github\</entry>
 
 	<!-- insert后是否返回主键 -->
 	<entry key="returnPK">true</entry>
@@ -52,16 +52,15 @@
 	<entry key="java_typemapping.java.lang.Long">Long</entry>
 	<entry key="java_typemapping.java.math.BigDecimal">BigDecimal</entry>
 	
-	<entry key="projectname">com-info</entry>
-	<entry key="apiname">api</entry>
-	<entry key="providername">api-impl</entry>
-	<entry key="errconstants">OrderErrorConstants</entry>
+	<entry key="projectname">info</entry>
+	<!-- <entry key="providername">api-impl</entry>
+	<entry key="errconstants">OrderErrorConstants</entry>-->
 	
 	<!--不用改动-->
-	<entry key="javasrc">src.main.java</entry>
+	<!--<entry key="javasrc">src.main.java</entry>
 	<entry key="sqlmap">src.main.resources.sqlmap</entry>
 	<entry key="test">src.test.java</entry>
-	<entry key="apiserviceimpl">api.impl</entry>
+	<entry key="apiserviceimpl">api.impl</entry>-->
 	
 	
 </properties>

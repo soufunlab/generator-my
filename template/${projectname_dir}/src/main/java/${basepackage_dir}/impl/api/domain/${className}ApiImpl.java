@@ -1,19 +1,19 @@
 <#assign className = table.className>   
 <#assign classNameLower = className?uncap_first>   
-package ${basepackage}.api.impl;
+package ${basepackage}.impl.api.domain;
 
-import ${basepackage}.api.${className}Api;
-import ${basepackage}.service.*;
+import ${basepackage}.api.domain.*;
+import ${basepackage}.impl.api.service.*;
 import org.springframework.stereotype.Service;
-import ${basepackage}.util.LogUtil;
+import ${basepackage}.impl.api.utils.*;
 import org.springframework.beans.factory.annotation.Autowired;
-import ${basepackage}.service.*;
-import ${basepackage}.model.*;
+import ${basepackage}.impl.api.service.*;
+import ${basepackage}.api.model.*;
 import com.ratel.common.model.base.Result;
 import java.util.List;
 import org.apache.commons.lang3.StringUtils;
-import ${basepackage}.constants.*;
-import ${basepackage}.query.*;
+import ${basepackage}.api.constants.*;
+import ${basepackage}.api.query.*;
 import com.ratel.common.model.page.Pagination;
 import com.ratel.common.model.MoChecker;
 import com.ratel.common.utils.ExceptionUtils;

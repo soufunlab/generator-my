@@ -3,8 +3,8 @@
 package ${basepackage}.test;
 
 import com.ratel.common.model.base.Result;
-import ${basepackage}.api.service.*;
-import ${basepackage}.model.*;
+import ${basepackage}.api.domain.*;
+import ${basepackage}.api.model.*;
 import org.junit.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 
@@ -13,7 +13,7 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 import org.junit.Assert;
-import ${basepackage}.query.*;
+import ${basepackage}.api.query.*;
 import com.ratel.common.model.page.Pagination;
 import com.ratel.common.model.MoChecker;
 

@@ -1,6 +1,6 @@
 <#assign className = table.className>   
 <#assign classNameLower = className?uncap_first> 
-package ${basepackage}.vo;
+package ${basepackage}.api.vo;
 
 import java.math.BigDecimal;
 import java.util.ArrayList;
