@@ -28,7 +28,7 @@ public class ${className}ApiImpl implements ${className}Api {
     private ${className}Service service;
 	
 	@Override
-	public Result<${className}> get${className}ById(${table.getPkColumn().javaType} id, String sessionId){
+	public Result<${className}> get${className}ById(${table.getPkColumn().javaType} id){
 		try {
             if (id == null) {
 				return new Result(ErroType.PARAMETER_ERROR.value(),ErroType.PARAMETER_ERROR.message());
@@ -46,7 +46,7 @@ public class ${className}ApiImpl implements ${className}Api {
 	}
 	
 	@Override
-	public Result<${className}> add${className}(${className} entity, String sessionId){
+	public Result<${className}> add${className}(${className} entity){
 		
         try {
             String cs = MoChecker.checkInsert(entity);
@@ -66,7 +66,7 @@ public class ${className}ApiImpl implements ${className}Api {
     }
 	
 	@Override
-	public Result<Boolean> del${className}ById(${table.getPkColumn().javaType} id, String sessionId) {
+	public Result<Boolean> del${className}ById(${table.getPkColumn().javaType} id) {
         try {
             if (id == null) {
                 return new Result(ErroType.PARAMETER_ERROR.value(),ErroType.PARAMETER_ERROR.message());
@@ -88,7 +88,7 @@ public class ${className}ApiImpl implements ${className}Api {
     }
 	
 	@Override
-	public Result<Boolean> update${className}(${className} entity, String sessionId){
+	public Result<Boolean> update${className}(${className} entity){
 		
         try {
             String cs = MoChecker.checkUpdate(entity);
@@ -109,7 +109,7 @@ public class ${className}ApiImpl implements ${className}Api {
     }
 	
 	@Override
-	public Result<List<${className}>> get${className}ListByCondition(${className}SearchParameter searchVo,String sessionId){
+	public Result<List<${className}>> get${className}ListByCondition(${className}SearchParameter searchVo){
         try {
             if (searchVo == null) {
                 return new Result(ErroType.PARAMETER_ERROR.value(),ErroType.PARAMETER_ERROR.message());
@@ -123,7 +123,7 @@ public class ${className}ApiImpl implements ${className}Api {
     }
 	
 	@Override
-	public Result<Pagination<${className}>> get${className}PageListByCondition(${className}SearchParameter searchVo,Pagination page,String sessionId){
+	public Result<Pagination<${className}>> get${className}PageListByCondition(${className}SearchParameter searchVo,Pagination page){
 		try {
             if (searchVo == null||page == null) {
                 return new Result(ErroType.PARAMETER_ERROR.value(),ErroType.PARAMETER_ERROR.message());

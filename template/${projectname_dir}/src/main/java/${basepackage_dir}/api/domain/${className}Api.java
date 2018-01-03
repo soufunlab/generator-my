@@ -16,54 +16,48 @@ public interface ${className}Api {
 	* @Description:
 	* @version 1.0 <#if now??>${now?string('yyyy/MM/dd hh:mm')}</#if> by 李浩（lihao@cloud-young.com）创建
 	* @param entity
-	* @param sessionId
 	* @return
 	*/
-	Result<${className}> add${className}(${className} entity, String sessionId);
+	Result<${className}> add${className}(${className} entity);
 	
 	/**
 	* @Description:
 	* @version 1.0 <#if now??>${now?string('yyyy/MM/dd hh:mm')}</#if> by 李浩（lihao@cloud-young.com）创建
 	* @param id
-	* @param sessionId
 	* @return
 	*/
-	Result<Boolean> del${className}ById(${table.getPkColumn().javaType} id, String sessionId);
+	Result<Boolean> del${className}ById(${table.getPkColumn().javaType} id);
 	
 	/**
 	* @Description:
 	* @version 1.0 <#if now??>${now?string('yyyy/MM/dd hh:mm')}</#if> by 李浩（lihao@cloud-young.com）创建
 	* @param id
-	* @param sessionId
 	* @return
 	*/
-	Result<${className}> get${className}ById(${table.getPkColumn().javaType} id, String sessionId);
+	Result<${className}> get${className}ById(${table.getPkColumn().javaType} id);
 	
 	/**
 	 * @Description:
 	 * @version 1.0 <#if now??>${now?string('yyyy/MM/dd hh:mm')}</#if> by 李浩（lihao@cloud-young.com）创建
 	 * @param entity
-	 * @param sessionId
 	 * @return
 	 */
-	Result<Boolean> update${className}(${className} entity, String sessionId);
+	Result<Boolean> update${className}(${className} entity);
 	
 	/**
 	 * @Description:
 	 * @version 1.0 <#if now??>${now?string('yyyy/MM/dd hh:mm')}</#if> by 李浩（lihao@cloud-young.com）创建
 	 * @param searchVo
-	 * @param sessionId
 	 * @return
 	 */
-	Result<List<${className}>> get${className}ListByCondition(${className}SearchParameter searchVo,String sessionId);
+	Result<List<${className}>> get${className}ListByCondition(${className}SearchParameter searchVo);
 	
 	/**
 	 * @Description:
 	 * @version 1.0 <#if now??>${now?string('yyyy/MM/dd hh:mm')}</#if> by 李浩（lihao@cloud-young.com）创建
 	 * @param searchVo
 	 * @param page
-	 * @param sessionId
 	 * @return
 	 */
-	Result<Pagination<${className}>> get${className}PageListByCondition(${className}SearchParameter searchVo,Pagination page,String sessionId);
+	Result<Pagination<${className}>> get${className}PageListByCondition(${className}SearchParameter searchVo,Pagination page);
 }
